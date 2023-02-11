@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 2</title>
+</head>
+
+<body>
+
+    <h1>Rellena tu cv</h1>
+
+    <form>
+
+        <label>
+            <strong>Nombre </strong>
+        </label>
+        <br>
+        <input type="text" maxlength="30" placeholder="Ingrese su nombre">
+        <br><br>
+
+        <label>
+            <strong>Apellidos</strong>
+        </label>
+        <br>
+        <input type="text" maxlength="80" placeholder="Ingrese su apellido">
+        <br><br>
+
+        <label>
+            <strong>Contraseña</strong>
+        </label>
+        <br>
+        <input type="password" minlength="3" maxlength="10" placeholder="Contraseña">
+        <br><br>
+
+        <label>
+            <strong>DNI</strong>
+        </label>
+        <br>
+        <input type="text" inputmode="numeric" pattern="\d*" placeholder="Número de identificación">
+        <br><br>
+
+        <span>
+            <strong>Sexo</strong>
+        </span>
+        <br>
+        <input type="radio" name="sexo">
+        <label>Hombre</label>
+        <br>
+        <input type="radio" name="sexo">
+        <label>Mujer</label>
+        <br><br>
+
+        <label>Incluir mi foto</label>
+        <input type="file">
+        <br><br>
+
+        <input type="checkbox" checked="checked">
+        <label>Suscribirme al boletín de novedades</label>
+        <br><br>
+
+        <button type="submit">Guardar formulario </button>
+
+    </form>
+</body>
+
+</html>
