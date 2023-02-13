@@ -8,56 +8,76 @@
     <title>Formulario 1</title>
 </head>
 
+<!--
+    Crear un formulario, con los campos necesarios para obtener la siguiente información de un usuario:
+    - Nombre y Apellido
+    - Edad
+    - Correo electrónico
+    - Banda de música preferida (mostar 4 opciones)
+    - Preguntar si desea recibir novedades/ descuentos en su correo electrónico
+-->
+
 <body>
 
     <h1>FORMULARIO N°1</h1>
     <h3>Por favor diligencie la siguiten información:</h3>
 
     <form action="">
-        <label> Nombre </label>
-        <input type="text" placeholder="Ingrese su nombre">
 
-        <br>
-        <br>
+        <ol>
 
-        <label> Apellidos </label>
-        <input type="text" placeholder="Ingrese su apellido">
+            <li>
+                <label> Nombre </label>
+                <input type="text" placeholder="Ingrese su nombre">
+            </li>
 
-        <br>
-        <br>
+            <br><br>
 
-        <label> Edad </label>
-        <input type="number" min="1" placeholder="Edad en años">
+            <li>
+                <label> Apellidos </label>
+                <input type="text" placeholder="Ingrese su apellido">
+            </li>
 
-        <br>
-        <br>
+            <br><br>
 
-        <label> Correo </label>
-        <input type="email" placeholder="Correo electronico">
+            <li>
+                <label> Edad </label>
+                <input type="number" min="1" placeholder="Edad en años">
+            </li>
 
-        <br>
-        <br>
+            <br><br>
 
-        <label> Selecciona tu banda favorita </label>
-        <select>
-            <option> The Strokes </option>
-            <option> Arctic Monkeys </option>
-            <option> Foo fighters </option>
-            <option> Deff Leppard </option>
-        </select>
+            <li>
+                <label> Correo </label>
+                <input type="email" placeholder="Correo electronico">
+            </li>
 
-        <br>
-        <br>
+            <br>  <br>
 
-        <label>Desea recibir novedades / descuentos en su correo electrónico</label>
-        <input type="checkbox">
+            <li> <label> Selecciona tu banda favorita </label>
+                <select>
+                    <option> The Strokes </option>
+                    <option> Arctic Monkeys </option>
+                    <option> Foo fighters </option>
+                    <option> Deff Leppard </option>
+                </select>
+            </li>
 
-        <br>
-        <br>
+            <br><br>
+
+            <li> <label>Desea recibir novedades / descuentos en su correo electrónico</label>
+                <input type="checkbox">
+            </li>
+
+            <br> <br>
+
+        </ol>
 
         <button type="reset">Borrar </button>
         <button type="submit">Guardar formulario </button>
+
     </form>
+
 </body>
 
 </html>
