@@ -1,0 +1,58 @@
+body {
+
+    background-color: whitesmoke;
+}
+
+.foto {
+
+    width: 300px;
+    height: 200px;
+    background-image: url(./imagenes/fotop.jpg);
+    background-size: cover;
+    border-radius: 50%;
+
+}
+
+.conte {
+
+    color: white;
+    background-color: #4198f4;
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+#portafolio {
+    font-size: 15px;
+}
+
+a {
+
+    color: white;
+
+}
+
+.contedor {
+
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+#formacion {
+
+    height: 550px;
+}
+
+#regresar {
+
+    margin: 10px;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: green;
+    border: 0.1em solid black;
+}
