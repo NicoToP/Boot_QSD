@@ -1,0 +1,83 @@
+/*
+REGLAS DE ESTILO EN CSS
+
+Selector {
+    Propiedad: valor;
+    Propiedad: valor;
+    Propiedad: valor;
+}
+
+Selector puede ser:
+
+  - etiqueta(nombre)
+  - .clases (.class) se pueden combinar clases y varios elementos lo pueden tener
+  - #ID (#id) es único, solo un elemento lo tiene.
+
+
+
+p {
+   color: #9e1616; /*HEXADECIAML (HEX) (A-F) (0-9) 
+}
+
+button {
+    background-color: rgb(226, 141, 30);
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.titulo {
+    color: green;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+#btn {
+    padding: 20px;
+    background-color: blue;
+}
+
+.contenedor {
+    border: 0.1em dotted #000;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.espaciado {
+    padding: 15px;
+}
+*/
+h1 {
+margin-left: 600px;
+}
+.formulario {
+    border-radius: 50px;
+    border: 0.1em dashed black;
+    padding-top: 35px;
+    padding-left: 250px;
+    padding-bottom: 35px;
+    margin-left: 350px;
+    margin-right: 350px;
+    background-color: rgba(36, 163, 247, 0.548);
+}
+
+.btn {
+
+    padding: 5px;
+}
+
+#borrar {
+    border-radius: 30px;
+    background-color: rgba(247, 36, 36, 0.74);
+    margin-left:90px;
+}
+
+#guardar {
+    border-radius: 30px;
+margin-left: 50px;
+    background-color: rgba(54, 247, 36, 0.74);
+
+}
