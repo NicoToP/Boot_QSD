@@ -1,15 +1,18 @@
 body {
 
-    background-color: whitesmoke;
+    background-color: rgb(235, 232, 232);
 }
 
 .foto {
 
-    width: 300px;
+    width: 200px;
     height: 200px;
     background-image: url(./imagenes/fotop.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
     border-radius: 50%;
+    border: 0.1em solid #4198f4;
 
 }
 
@@ -21,6 +24,7 @@ body {
     padding: 10px;
     border-radius: 20px;
     margin-bottom: 10px;
+
 }
 
 #portafolio {
@@ -42,6 +46,12 @@ a {
     margin: 15px;
 }
 
+.contedor p {
+
+    text-align: justify;
+   
+}
+
 #formacion {
 
     height: 550px;
@@ -49,10 +59,19 @@ a {
 
 #regresar {
 
-    margin: 10px;
-    font-size: 15px;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: green;
+    font-size: 17px;
+    border-radius: 8%;
+    color: black;
+    /* background-color: green;
+    border: 0.1em solid black;*/
+
+}
+
+.btn {
+    text-align: center;
     border: 0.1em solid black;
+    width: 100px;
+    height: 30px;
+    background-color: yellow;
+    padding: auto;
 }
