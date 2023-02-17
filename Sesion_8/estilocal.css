@@ -1,0 +1,36 @@
+
+.contenedor {
+
+    display: flex;
+    border: 2px solid black;
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: rgb(66, 66, 66);
+}
+
+.item {
+
+    width: 100%;
+    color: white;
+    background-color: rgb(66, 66, 66);
+    text-align: center;
+    border: 0.1em solid white;
+    
+}
+.color {
+     
+    background-color: rgb(226, 145, 16);
+}
+
+#cero {
+    width: 210%;
+}
+
+#numero {
+    width: 100%;
+    font-size: 40px;
+
+}
+h1 {
+    margin: 0;
+}

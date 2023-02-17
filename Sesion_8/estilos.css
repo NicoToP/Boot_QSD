@@ -1,0 +1,28 @@
+.contenedor {
+
+    display: flex;
+    border: 2px solid black;
+    margin: 0 auto;
+    flex-direction: column-reverse;
+}
+
+.item {
+
+    color: white;
+    background-color: darkslategray;
+    margin: 20px;
+    text-align: center;
+}
+
+
+
+/*
+margin: arriba derecha abajo izquierda
+margin: 10px 20px 30px 40px
+
+margin: arriba/abajo der/izq
+margin: 15px 80px
+
+ margin: arriba derecha abajo izquierda
+ margin: 35px
+*/

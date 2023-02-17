@@ -1,0 +1,47 @@
+.contenedor {
+    display: grid;
+    max-width: 800px;
+    min-width: 200px;
+    margin: 0 auto;
+    /*tres columnas automaticas ocupan el espacio de los elemntos*/
+    grid-template-columns: auto auto auto auto;
+    /*row-gap: 15px;
+    column-gap: 15px;*/
+    gap: 15px;
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 50px;
+}
+
+#numero {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 40px;
+    direction: rtl;
+    border-radius: 25px;
+    padding: 8px;
+}
+
+#cero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.amarillo {
+    background-color: rgb(226, 145, 16);
+}
+
+.titulo {
+    text-align: center;
+}
+
+.item {
+    font-size: 30px;
+    border-radius: 30px;
+}
+
+.item:hover {
+background-color: rgb(42, 151, 165);
+}
+
+

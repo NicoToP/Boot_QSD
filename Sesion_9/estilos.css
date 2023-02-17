@@ -1,0 +1,27 @@
+.contenedor {
+    display: grid;
+    /*tres columnas automaticas ocupan el espacio de los elemntos*/
+    grid-template-columns: auto auto auto;
+    /*row-gap: 15px;
+    column-gap: 15px;*/
+    gap: 15px;
+}
+
+.item {
+    background-color: rgb(80, 80, 80);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+}
+
+#ancho {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#alto {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
