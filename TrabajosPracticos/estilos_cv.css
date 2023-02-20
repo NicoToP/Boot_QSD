@@ -58,7 +58,9 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
-
+.contactar ul {
+    padding-left: 0px;
+}
 .contactar li {
 
     display: flex;
