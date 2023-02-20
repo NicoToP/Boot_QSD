@@ -1,0 +1,49 @@
+.contenedor {
+    background-image: url(conci.jpg);
+    margin: 0 auto;
+    z-index: -1;
+    height: 800px;
+}
+
+#info {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 25px;
+    background-color: rgba(255, 240, 105, 0.116);
+    gap: 30px;
+}
+
+.color {
+    color: white;
+}
+
+.btn {
+    background-color: rgba(0, 0, 0, 0.301);
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform .2s;
+}
+
+.btn:hover {
+    background-color: rgba(0, 255, 76, 0.548);
+    transform: scale(1.1);
+}
+
+.titulo {
+    border: 0.1em solid white;
+    text-align: center;
+    width: 800px;
+    margin: 40px auto;
+}
+ul {
+    display: flex;
+}
+
+li {
+    width: 100%;
+    color: white;
+    text-align: center;
+    list-style: none;
+    border: 0.1em solid white;
+}
