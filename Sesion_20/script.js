@@ -185,23 +185,100 @@ Estas son las opciones:
 
 */
 
+var creacion = false;
+var exite = false;
 var opcion = parseInt(
     prompt(
-        "Bienvenid@ a  \n\n 1) Crear una playlist \n 2) Agregar canción \n 3) Buscar canción \n 4) Mostrar playlist \n 5)Salir"
+        "Bienvenid@ a  \n\n 1) Crear una playlist \n 2) Agregar canción \n 3) Buscar canción \n 4) Mostrar playlist \n 5) Salir"
     )
 );
-switch (opcion) {
+while (opcion != 5) {
 
-    case 1:
-        var nombre_playlist = prompt("Agregue el nombre de su playlist");
-        var playlist =[];
-        break;
+    switch (opcion) {
 
-    case 2:
-        do{
-            var cancion = prompt("Escriba el nombre de la canción que dessea guardar");
-            playlist[i] = cancion;
+        case 1:
+            if (creacion == false) {
 
-        } while( cancion.toLowerCase == "no más");
+                var nombre_playlist = prompt("Agregue el nombre de su playlist");
+                var playlist = [];
+                creacion = true;
+                console.log(creacion);
+                console.log(nombre_playlist);
+                opcion = parseInt(
+                    prompt(
+                        "Bienvenid@ a  \n\n 1) Crear una playlist \n 2) Agregar canción \n 3) Buscar canción \n 4) Mostrar playlist \n 5) Salir"
+                    )
+                );
 
-}
+            } else {
+                alert("Ya creó la playlist, agregue canciones");
+
+                opcion = parseInt(
+                    prompt(
+                        "Bienvenid@ a  \n\n 1) Crear una playlist \n 2) Agregar canción \n 3) Buscar canción \n 4) Mostrar playlist \n 5) Salir"
+                    )
+                );
+            }
+            break;
+
+
+        case 2:
+
+            if (creacion == true) {
+
+                var canti_canciones = prompt("Cuantas canciones desea guardar");
+                for (var i = 0; i < canti_canciones; i++) {
+
+                    var cancion = prompt("Escriba el nombre de la canción que desea guardar:").toLowerCase();
+                    playlist[i] = cancion;
+                }
+                alert("Sus canciones quedaron guardadas");
+            } else {
+
+                alert("Para agregar canciones debe crear una playlist");
+            }
+            break;
+
+
+        case 3:
+            if (creacion == true) {
+                var buscar = prompt("Ingrese la canción que desea buscar").toLowerCase();
+                console.log(buscar);
+                for (var i = 0; i <= playlist.length; i++) {
+                    if (playlist[i] == buscar) {
+                        exite = true;
+                    }
+                }
+
+                if (exite == true) {
+                    alert("La canción " + buscar + " SI está en la playlist");
+                } else {
+                    alert("La canción" + buscar + "NO está en la playlist, si desea agregarla vaya a la opción de agregar canciones")
+
+                };
+
+            } else {
+                alert("Para buscar canciones debe crear una playlist");
+            }
+
+            break;
+
+        case 4:
+
+            if (creacion == true) {
+
+                alert("Titulo " + nombre_playlist + "\n Canciones : " + playlist);
+            } else {
+                alert("Para mostrar la playlist debe crear una primero");
+            }
+            break;
+
+        case 5:
+            alert("Gracias");
+            break;
+
+        default:
+            alert("¡OPCIÓN INVALIDA!");
+            break;
+    }
+};
