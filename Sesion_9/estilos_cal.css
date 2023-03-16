@@ -41,7 +41,5 @@
 }
 
 .item:hover {
-background-color: rgb(42, 151, 165);
+    background-color: rgb(42, 151, 165);
 }
-
-
