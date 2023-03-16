@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesion 23</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <!--
+
+    <h1>Aprendiendo Eventos y Triggers</h1>
+    
+    <button id="boton">click acá</button>
+    <br>
+
+    <h2>Ejercicio 1</h2>
+    <h4>Vamos a identificar si un número es par o impar</h4>
+    <input id="numero" type="number" placeholder="Ingresa un número" value="">
+    <button id="mostrar"> MOSTRAR</button>
+    <button id="resetear">BORRAR</button>
+    <h3 id="mensaje"></h3>
+    
+    <h2>Ejercicio 2</h2>
+    <input id="texto" type="text" placeholder="Ingresa un texto" value="">
+    
+    <h3 id="normal"></h3>
+    <h3 id="mayus"></h3>
+    <h3 id="minus"></h3>
+    <h3 id="italica"></h3>
+    <h3 id="contrario"></h3>
+    
+    <h2>Ejercicio 3</h2>
+    <span>CALCULADORA SENCILLA</span>
+    
+    
+    
+    
+    <div class="conte_opera">
+        
+        <div class="pantalla">
+            <H4 id="msj_resultado">0</H4>
+        </div>
+        
+        <input type="number" id="num1" placeholder="Ingrese un número" value="">
+        <input type="number" id="num2" placeholder="Ingrese otro número" value="">
+        <button id="suma"> + </button>
+        <button id="resta"> - </button>
+        <button id="multi"> * </button>
+        <button id="divi"> / </button>
+    </div>
+
+
+    <button id="add">agregar fila</button>
+
+    <table id="tabla"></table>
+-->
+
+    <div class="container-fluid text-center mx-auto p-4 text-light">
+        <h1>EJERCICIO FACTURA</h1>
+    </div>
+
+
+    <div class="container-fluid mx-auto contenedor p-5">
+
+        <h2 class="titulo">INFORMACIÓN BÁSICA</h2>
+
+        <div class="row">
+
+            <div class="col">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha_ing" placeholder="name@ejemplo.com">
+            </div>
+
+            <div class="col">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre_ing" placeholder="Nombre completo">
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col">
+                <label for="email" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="email_ing" placeholder="name@ejemplo.com">
+            </div>
+
+            <div class="col">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input type="number" class="form-control" id="telefono_ing" placeholder="Ej: 3152015785">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid contenedor p-5">
+
+        <h2 class="titulo">INGRESO DE PRODUCTOS</h2>
+
+        <div class="row">
+
+            <div class="col">
+                <label for="producto" class="form-label">Producto</label>
+                <input type="text" class="form-control producto" id="producto_ing" placeholder="Ingrese producto">
+            </div>
+
+            <div class="col">
+                <label for="cantidad" class="form-label">Cantidad</label>
+                <input type="number" class="form-control" id="cantidad_ing" placeholder="Ej: 2">
+            </div>
+
+            <div class="col">
+                <label for="precio" class="form-label">Precio unidad</label>
+                <input type="number" class="form-control" id="precio_ing" placeholder="Ej: 100">
+            </div>
+
+        </div>
+
+        <div class="row mt-4 boton">
+
+            <div class="col">
+                <button type="button" class="btn btn-success" id="add">Añadir producto</button>
+            </div>
+
+        </div>
+
+        <div class="row mt-4 boton">
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button type="button" class="btn btn-warning" id="mostrar">Mostrar Factura</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid contenedor_principal">
+        <div class="container-fluid info">
+
+            <span id="fecha_salida"></span>
+            <span id="nombre_salida"></span>
+            <span id="email_salida"></span>
+            <span id="telefono_salida"></span>
+
+        </div>
+        <table id="tabla_produc" class="table-warning">
+            
+        </table>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

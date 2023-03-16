@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:  rgb(49, 74, 72);
+}
+/*
+span {
+    text-align: center;
+}
+.pantalla {
+    background-color: rgba(240, 248, 255, 0.648);
+    border-radius: 10px;
+    direction: rtl;
+    font-size: 1rem;
+}
+
+
+.conte_opera {
+
+    padding: 3%;
+    background-color: rgb(228, 156, 156);
+    border-radius: 20px;
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2px
+    
+}
+
+#msj_resultado {
+
+    margin: 0px;
+}
+*/
+
+.titulo
+{
+    margin-bottom: 4%;
+}
+
+.contenedor {
+    margin-bottom: 2%;
+    max-width: 70vw;
+    border-radius: 5vw;
+    background-color: rgba(240, 248, 255, 0.86);
+}
+
+.info {
+    background-color: rgba(240, 248, 255, 0.86);
+}
