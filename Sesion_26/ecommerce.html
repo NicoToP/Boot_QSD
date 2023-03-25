@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-dark">
+
+        <div class="container">
+            <a class="navbar-brand text-white fs-3" href="#">
+                <img id="logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/The_Simpsons_yellow_logo.svg/640px-The_Simpsons_yellow_logo.svg.png"
+                    alt="">
+            </a>
+            <div class="navbar-nav">
+                <a id="btn_productos" class="nav-link text-white fs-5" aria-current="page" href="#">Productos</a>
+                <a id="btn_carrito" class="nav-link text-white fs-5" href="#">Carrito</a>
+                <a id="btn_nosotros" class="nav-link text-white fs-5" href="#">Nosotros</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <section id="seccionProductos" class="m-5">
+
+        <div class="row justify-content-evenly p-2">
+
+            <div class="col-3">
+                <div class="card p-3">
+                    <img src="https://i.pinimg.com/550x/d4/30/26/d430260dbec037ad79e5b30109956958.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container d-flex justify-content-between align-items-center p-0">
+                            <h5 class="card-title">Camiseta</h5>
+                            <small>$30.000</small>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn_agregar btn btn-dark" id="producto1" data-precio="30000"
+                            data-producto="Camiseta"><i class="bi bi-cart-plus-fill"></i>
+                            agregar</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-3">
+                <div class="card p-3">
+                    <img src="https://falabella.scene7.com/is/image/FalabellaCO/27333674_1?wid=800&hei=800&qlt=70"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container d-flex justify-content-between align-items-center p-0">
+                            <h5 class="card-title">Pantalón</h5>
+                            <small>$80.000</small>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn_agregar btn btn-dark" id="producto2" data-precio="80000"
+                            data-producto="Pantalón"> <i class="bi bi-cart-plus-fill"> </i>
+                            agregar
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-3">
+                <div class="card p-3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrIU9SuXtAA0WgVeSyNB6mQQzgMf-9n5HV7A&usqp=CAU"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container d-flex justify-content-between align-items-center p-0">
+                            <h5 class="card-title">Medias</h5>
+                            <small>$15.000</small>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn_agregar btn btn-dark" id="producto3" data-precio="15000"
+                            data-producto="Medias"><i class="bi bi-cart-plus-fill"></i>
+                            agregar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card p-3">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_969648-MCO51396610875_092022-O.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container d-flex justify-content-between align-items-center p-0">
+                            <h5 class="card-title">Buzo</h5>
+                            <small>$30.000</small>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn_agregar btn btn-dark" id="producto4" data-precio="30000"
+                            data-producto="Buso"> <i class="bi bi-cart-plus-fill"></i>
+                            agregar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-evenly p-2">
+
+            <div class="col-3">
+                <div class="card p-3">
+                    <img src="https://i.pinimg.com/originals/81/33/0a/81330a76148aec7539e4fe128cfb67b7.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container d-flex justify-content-between align-items-center p-0">
+                            <h5 class="card-title">Chaqueta</h5>
+                            <small>$100.000</small>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn_agregar btn btn-dark" id="producto5" data-precio="100000"
+                            data-producto="Chaqueta"><i class="bi bi-cart-plus-fill"></i>
+                            agregar</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-3">
+                <div class="card p-3">
+                    <img src="https://media.gq.com.mx/photos/63516022149bf9e13c14d36a/1:1/w_932,h_933,c_limit/margesimpsonadidas.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container d-flex justify-content-between align-items-center p-0">
+                            <h5 class="card-title">Zapatos</h5>
+                            <small>$150.000</small>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn_agregar btn btn-dark" id="producto6" data-precio="150000"
+                            data-producto="Zapatos"> <i class="bi bi-cart-plus-fill"> </i>
+                            agregar
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-3">
+                <div class="card p-3">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_706244-MCO44064659805_112020-W.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container d-flex justify-content-between align-items-center p-0">
+                            <h5 class="card-title">Bermuda</h5>
+                            <small>$90.000</small>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn_agregar btn btn-dark" id="producto7" data-precio="90000"
+                            data-producto="Bermuda"><i class="bi bi-cart-plus-fill"></i>
+                            agregar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card p-3">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_731632-MLM52514042012_112022-W.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container d-flex justify-content-between align-items-center p-0">
+                            <h5 class="card-title">Gorra</h5>
+                            <small>$80.000</small>
+                        </div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn_agregar btn btn-dark" id="producto8" data-precio="80000"
+                            data-producto="Sombrero"> <i class="bi bi-cart-plus-fill"></i>
+                            agregar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="seccionCarrito" class="m-5">
+
+        <div class="container d-flex align-items-center m-4">
+            <h2>Carrito de compras</h2>
+            <i id="img_car" class="bi bi-cart4"></i>
+        </div>
+
+        <div class="container p-2 border">
+
+            <h1 id="mensaje_vacio">Aún no hay productos Anímate y agrega lo que más te guste</h1>
+
+            <table id="tabla" class="table table-striped" style="display: none;">
+
+                <thead id="tabla_cabeza" class="table-dark">
+                    <tr>
+                        <th scope="col">INDICE</th>
+                        <th scope="col">PRODUCTO</th>
+                        <th scope="col">CANTIDAD</th>
+                        <th scope="col">PPECIO</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabla_cuerpo">
+
+                </tbody>
+
+                <tfoot id="tabla_pie">
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td id="totalCompra"></td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </div>
+    </section>
+
+    <section id="seccionNosotros" class="m-5">
+        <div class="container m-5 p-4 d-flex justify-content-around border">
+
+            <div class="container">
+                <h2 class="container m-3 ">¿Quienes somos?</h2>
+                <p class="text-align-justify"> Somos una empresa dedicada a la fabricación y comercialización de
+                    prodcutos relacionados con nuestra
+                    familia amarrilla preferida <strong>LOS SIMPSONS</strong>. LLevamos más de 10 años de experiencia en
+                    la industria, y todos nuestros productos son de alta calidad. Brindamos servicio de envios
+                    nacionales e internacionales.
+                </p>
+            </div>
+
+            <div class="container d-flex justify-content-center">
+                <img id="img_somos"
+                    src="https://www.fayerwayer.com/resizer/orXp4vvTScr5h_XvLrYkX4ari2I=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/V4CQNELMTFE4DDFOY6SO2AATTE.jpg"
+                    alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript" src="script_ecommerce.js"></script>
+</body>
+</html>
