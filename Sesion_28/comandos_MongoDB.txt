@@ -1,0 +1,260 @@
+FORMA PARA REALIZAR CONSULTAS
+
+{ clave: "valor"}
+{ <campo>: "valor"}
+{ <campo>: { <operador>: "valor"} }
+
+{ marca: "Apple" } ---------> consultamos todos los productos con marca "Apple"
+
+
+OPERADORES MATEMÁTICOS PARA MongoDB
+
+$eq ----> igual que (equal)
+$ne ----> distinto que (not equal)
+$gt ----> valores mayores que (greater than)
+$gte ---> valores mayores o iguales que (greater than or equal)
+$lt ----> valores menores que (lower than)
+$lte ---> valores menores o iguales que (lower than or equal)
+
+OPERADORE LÓGICOS MongoDB
+
+AND ------>  { <campo>: <valor>,  <campo2>: <valor> , <campo3> : <valor> }
+
+OR ------>   { $or: [ {consulta}, {consulta} ] } 
+ejemplo:
+
+{ $or: [ {genero: "M"}, {edad: { $eq: 18 } } ] } 
+
+
+EXTRAS:
+
+nombre: { regex: / texto_a_buscar $/ }  s en al final  
+nombre: { regex: /^ texto_a_buscar / }  s en al principio 
+nombre: { regex: / texto_a_buscar / }   s en algúnn lado del nombre  
+
+OTROS COMANDOS (CREO DE CONSOLA)
+
+Ver Bases de Datos
+******************
+
+show dbs
+
+Ver bases de datos actual
+************************
+db
+
+Cambiar de DB p crear una (si no existe)
+************************
+use nombre_db
+
+Eliminar una Base de Datos (cuidado con esto!!!)
+************************
+db.dropDatabase()
+
+Crear colección
+********************
+db.createCollection("miColeccion")  --------> usualmente el nombre de la colección va en plural,sin espacios, sin caracteres especiales
+
+Mostrar Colecciones
+*******************
+
+show collections
+
+
+Buscar/consultar
+*****************
+
+db.miColeccion.find() ---> obtengo TODOS los documentos de miColeccion y todos sus datos
+db.miColeccion.find( { edad: { $gt: 30 } } )  ----> obtengo los documentos que cumplen con el criterio de búsqueda (edad > 30)
+db.miColeccion.find({}, { nombre:1 }) ---> obtengo TODOS los documentos, pero sólo veo el nombre y el _id
+
+
+db.db.miColeccion.find().count() --------> Obtengo la cantidad de documentos que coinciden con ese criterio de busqueda
+
+db.db.miColeccion.find().limit(3) --------> Obtengo los 3 primeros documentos que coinciden con ese criterio de busqueda
+db.db.miColeccion.find().skip(5) --------> Obtengo TODOS los documentos, pero salto los primeros 5(o sea muestra desde el 6to)
+db.db.miColeccion.find().limit(10).skip(10)  Obtengo los 10 docuemntos, pero salntando los primeros 10
+
+
+db.db.miColeccion.find().sort({nombre:1}) --------> obtengo todos los documentos, y los ordena por el "nombre" ASCENDENTEMENTE (ASC, de la A-Z, de menor a mayor) 
+db.db.miColeccion.find().sort({edad:-1})  -------->  obtengo todos los documentos, y los ordena por la "edad" DESCENDENTEMENTE (DESC, de la Z-A, de mayor a menor)  
+db.db.miColeccion.find().sort({nombre:1 , edad: -1}) --------> combino los ordenamientos 
+
+
+Insertar documentos
+*******************
+
+db.miColeccion.insertOne( { documento } ) ---> inserto un documento (en formato JSON)
+db.miColeccion.insertOne( { nombre: "Alejandra", edad: 30, estado: false } )
+
+db.miColeccion.insertMany([{ documento1 },{ documento2 },{ documento3 }]) ---> inserto múltiples documentos
+db.miColeccion.insertMany([ { letra: "A", color:"rojo" }, { letra: "B", color: "azul" }, { letra: "C", color: "verde" } ])
+
+
+Eliminar documentos
+*******************
+
+db.miColeccion.deleteOne( { letra: "A" } )   -------> elimina UN documento que cumple con la condición letra = "A"
+
+db.micollecion.deleteMany({ condicion })  -------> elimina TODOS los documentos que cumplan con la condición
+EJEMPLO:
+
+db.Tares.deleteOne({ titulo:"Mercar"}) 
+
+
+Actualizar documentos 
+*********************
+
+db.miColeccion.updateOne({condicion},{ $set: {clave:el dato actualizado} } )
+
+
+Cambiar un campo clave
+****************
+
+b.miColeccion.updateOne({condicion},{ $rename: {clave acutual: "clave nueva"} } )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-Obtener los documentos que el mail termine en "nifty.com"
+
+{ email: { $regex: /nifty.com$/ } }
+
+-Obtener los documentos que un campo comience con la letra "a" (no importa si es mayuscula o miniscula)
+
+{ nombre: { $regex: /^a/i } }
+
+-Obtener una letra/palabra que esté en el medio de un campo. Ej: emiliano@gmail.com
+
+{ email: { $regex: /gmail/i } }
+
+
+
+
+{ marca: { $eq:  "Apple" } }
+
+{ precio: { $eq:  44446 } }
+
+{ precio: { $lte:  450000 } }
+
+
+
+CONSULTAS EJERCICIOS
+
+1.Obtener documentos que el nombre sea "Andrea"
+
+{ nombre: { $eq:  "Andrea" } }
+{ nombre: "Andrea" }
+
+2.Obtener documentos que el nombre NO SEA "Peter"
+
+{ nombre: { $ne:  "Peter" } } 1000 personas
+
+3.Obtener las personas mayores de edad
+
+{ edad: { $gte: 18 } }   962 personas
+
+4.Obtener auqellas personas que sean mayor de edad y que tengan talle M
+
+{ edad: { $gte: 18}, talle: "M" }    fueron 135 personas 
+
+5. Obtener las personas de género femenino que sean menor de edad 
+
+{ genero: "F" , edad: { $lte:17 } }
+
+6. A la consulta anterior aquellas cuyo talles de remera no sea L
+
+{ genero: "F" , edad: { $lte:17 }, talle: { $ne: "L" } }      fueron 15 personas
+
+7. Obtener aquellas personas cuyos nombres terminen en "a" y su talle sea S
+
+{ nombre: { $regex: /a$/ }, talle: "S" }
+
+8. Obtener aquellas personas que su apellido comienza con "P" (may o min), y nacieron en el año 1992, Y
+el idioma es distinto a "Italian"
+
+{ apellido: { $regex: /^p/i },  idioma: {$ne: "Italian" }, fec_nac: { $regex: /1992$/ }  }
+
+9.Obtener las personas que es su titulo contengas un "r" y hayan nacido en el mes de Diciembre 
+
+{ titulo: { $regex: /r/i }, fec_nac: { $regex: /^.*\/12\/.*/ } }
+
+10. Personas que NO hable "Italian" y que su titulo sea "Mrs"
+
+{ idioma: { $ne: "Italian" }, titulo: "Mrs"}
+
+11. que el titulo commience con letra m (may o min), y fecha de nacimiento termine en 1990
+
+{ titulo: { $regex: /^m/i }, fec_nac: { $regex: /1990$/ }  }
+
+12. personas que tenga r en el titulo
+
+{titulo :{ $regex:/r/i } }
+
+13.Buscar auqellas personas que usan talle "XL" o que nacieron en 1985
+
+{ $or: [ {talle: "XL"}, {fec_nac: { $regex: /1985$/ } } ] }
+
+14. Obtener aquellas personas que su apellido comienza con "D" y que son mujeres o mayores a 50 años
+
+{ apellido: { $regex: /^D/ },  $or: [ { genero: "F"} , { edad: { $gt: 50 } } ] } 
+
+14. Mostrar email de aquellas personas que tengan entre 20 y 30 años
+
+{ edad: { $gte: 20,$lte: 30} }
+{email:1, _id:0}
+
+
+genero de menor a mayor (ASC)
+edad de mayor a menor (DESC)
+y solo mostrar esos campos
+
+{edad: 1, genero: 1,_id:0},{genero : 1 ,edad: -1}
+
+
+//------------------------------
+
+$exist:true
+
+Ejericio grupal:
+
+- Alquiler de autos
+- Crear la colección correspondiente (sólo una)
+- Insertar al menos 5 documentos (con los datos necesarios)
+- CONSULTAS:
+  - buscar documentos que el auto sea marca: "Peugeot" 
+  - buscar documentos que el total (precio) sea mayor a 10000 o que el cliente exista, ordenar por precio de menor a mayor
+  - buscar documentos que fecha de alquiler sea del 2022 (usar regex)
+  - buscar todos los documentos de un cliente en particular, mostrar sólo el campo total.
+  - buscar documentos que el auto alquilado NO sea "Audi" y SI sea "Fiat" o "Chevrolet" o "Ford"
+
+
+
+1. { marca: "Peugeot" }
+
+2. { $or: [ {precio: { $gt: 10000} }, { cliente: {$ne: null } } ] }  
+
+  { precio: 1}
+
+3. { fec_rent: { $regex: /2022$/ } }
+
+4. { "cliente.nombre" : "Andres"}
+
+{ "cliente.total": 1 ,  _id:0 }
+
+5.
+
