@@ -77,7 +77,7 @@ function multiplicacion(num1, num2) {
 }
 
 function division(num1, num2) {
-    var total = num1 * num2;
+    var total = num1 / num2;
     alert("El valor de la división entre " + num1 + " / " + num2 + " = " + total);
 }
 
