@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+    <br><br>
+    <form action="/calculador" method="post">
+
+        <input type="number" placeholder="ingrese primer numero" name="numero1">
+        <br>
+        <input type="number" placeholder="ingrese segundo numero" name="numero2">
+        <br> <br>
+
+        <select name="operacion">
+            <option value="-">Elige la operación</option>
+            <option value="suma">Sumar</option>
+            <option value="resta">Restar</option>
+            <option value="multi">Multiplicar</option>
+            <option value="divi">Dividir</option>
+        </select>
+
+        <button type="submit">calcular</button>
+    </form>
+</body>
+</html>
