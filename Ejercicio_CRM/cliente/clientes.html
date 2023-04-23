@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sistema CRM | clientes</title>
+    <link rel="stylesheet" href="./estilos/styles_cliente.css">
+</head>
+
+<body>
+    <section class="encabezado">
+        <h1 class="titulo">CLIENTES</h1>
+    </section>
+
+    <div class="contenedorMenu">
+        <div class="menu">
+            <a href="/" class="ov-btn-slide-bottom">
+                HOME </a>
+            <a href="/contacto" class="ov-btn-slide-bottom">
+                CONTACTO</a>
+        </div>
+    </div>
+
+
+    <div class="contenedor">
+        <div>
+            <h3 class="titulo2">Información básica del cliente</h3>
+        </div>
+        <form  id="form_cliente">
+            <div class="grid-item"> 
+                <label for="">Nombre completo</label>
+                <input type="text" name="nombre" placeholder="Ingrese nombre">
+            </div>
+            <div class="grid-item">
+                <label for="">Pais</label>
+                <input type="text" name="pais" placeholder="Ingrese pais de origen">
+            </div>
+            <div class="grid-item">
+                <label for="">Correo electrónico</label>
+                <input type="email" name="correo" placeholder="Ingrese correo">
+            </div>
+            <div class="grid-item">
+                <label for="">Número telefónico</label>
+                <input type="text" name="telefono" placeholder="Ingrese telefono">
+            </div>
+            <div class="grid-item">
+                <label for="">Fecha</label>
+                <input id="inputfecha" type="date" name="fecha">
+            </div>
+            <button id="btn_agregar" type="submit"> Agregar </button>
+        </form>
+    </div>
+
+    <div class="contenedor">
+        <h2  class="titulo2" id="mensaje"></h2>
+        <table id="tabla">
+
+        </table>
+    </div>
+
+
+
+
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--JS-->
+    <script src="./script_clientes.js"></script>
+</body>
+
+</html>

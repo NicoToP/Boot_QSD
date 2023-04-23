@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sistema CRM | Contacto</title>
+    <!--Estilos hoja-->
+    <link rel="stylesheet" href="./estilos/styles_contacto.css">
+</head>
+
+<body>
+
+    <section class="encabezado">
+        <h1 class="titulo">CONTACTO</h1>
+    </section>
+
+    <div class="contenedorMenu">
+        <div class="menu" >
+            <a href="/" class="ov-btn-slide-bottom"> <!-- El  slash ente comillas"/" es la ruta al html dle index-->
+                HOME
+            </a>
+            <a href="/clientes" class="ov-btn-slide-bottom"> <!-- El  cleintes ente comillas"clientes" es la ruta al html clientes-->
+                CLIENTES</a>
+        </div>
+    </div>
+
+
+
+    <div class="contenedor">
+        <div>
+            <h3 class="titulo2">Formulario ingreso de contacto</h3>
+        </div>
+
+        <form id="form_contactos">
+
+            <div class="grid-item">
+                <label for="">Nombre cliente</label>
+                <select name="nombre" id="clientes"> <!--este name es importante porque se usa para obtener los datos de ese select-->
+                </select>
+            </div>
+            <div class="grid-item">
+                <label for="">Fecha</label>
+                <input type="date" name="fecha">
+            </div>
+            <div class="grid-item">
+                <label for="">Estado</label>
+                <select name="estado">
+                    <option value="cerrado">Cerrado</option>
+                    <option value="Interesado">Interesado</option>
+                    <option value="No Interesado">No interesado</option>
+                </select>
+            </div>
+            <div class="grid-item">
+                <label for="">Tipo de contacto</label>
+                <select name="tipo">
+                    <option value="presencial">Presencial</option>
+                    <option value="virtual">Virtual</option>
+                    <option value="telefonica">Telefonica</option>
+                    <option value="correo">Correo</option>
+                </select>
+            </div>
+            <div class="grid-item5">
+                <label for="">Descripción de reunión</label>
+                <textarea name="descripcion" id="" cols="50" rows="5"></textarea>
+            </div>
+            <button id="btn_agregar" type="submit"> AGREGAR </button>
+        </form>
+
+    </div>
+
+    <div class="contenedor">
+        <h2 class="titulo2" id="mensaje"></h2> <!--Se cambia el manipulando el dom-->
+        <table id="tablaC"> <!--Se crea la tabla manipulando el dom-->
+
+        </table>
+    </div>
+
+
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--JS-->
+    <script src="./script_contactos.js"></script>
+</body>
+
+</html>

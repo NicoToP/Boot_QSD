@@ -1,0 +1,90 @@
+body {
+    padding: 1em;
+    margin: 0;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+}
+
+.menu {
+    border-radius: 10px 100px / 120px;
+    margin-top: 4em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.556);
+    padding: 3em;
+    height: 10em;
+    width: 100vh;
+    box-shadow: 0px 10px 10px -6px black;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+    margin: 0 1em 0 1em;
+    color: white;
+    font-size: 1.4em;
+    
+}
+
+.encabezado {
+    background: rgba(255, 255, 255, 0.556);
+    text-align: center;
+    box-shadow: 0px 10px 10px -6px black;
+}
+
+.titulo {
+    margin: 0;
+    padding: 0.5em;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+}
+
+/*** ESTILOS BOTÓN SLIDE BOTTOM ***/
+.ov-btn-slide-bottom {
+    box-shadow: 0px 10px 10px -6px black;
+    background: rgba(255, 255, 255, 0.556); /* color de fondo */
+    /*color: #8d1dc9d3;  color de fuente */
+    color: black;
+    padding: 3%;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    width: 10em;
+    border-radius: 10px;
+  }
+  .ov-btn-slide-bottom:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .ov-btn-slide-bottom::after {
+    content: "";
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .ov-btn-slide-bottom:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
